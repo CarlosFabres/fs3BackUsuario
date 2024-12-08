@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: producto
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - Wallet_fs3:/app/wallet
+    environment:
+      SPRING_DATASOURCE_USERNAME: ADMIN
+      SPRING_DATASOURCE_PASSWORD: OracleCloud123
